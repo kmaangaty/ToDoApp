@@ -65,4 +65,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview.v165)
     debugImplementation(libs.androidx.ui.tooling.v165)
     implementation(libs.showkase)
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    androidTestImplementation(libs.androidx.room.testing)
 }
