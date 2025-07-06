@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.example.todoapp"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.todoapp"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -69,4 +69,7 @@ dependencies {
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     androidTestImplementation(libs.androidx.room.testing)
+    kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.android.gradle.plugin)
+
 }
