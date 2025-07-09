@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
@@ -23,6 +24,7 @@ import androidx.navigation.compose.rememberNavController
 import com.airbnb.android.showkase.annotation.ShowkaseComposable
 import com.example.todoapp.navigation.SetupNavigation
 import com.example.todoapp.ui.theme.ToDoAppTheme
+import com.example.todoapp.ui.viewmodels.SharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -30,6 +32,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private lateinit var navController: NavHostController
+    private val sharedViewModel: SharedViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +40,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             ToDoAppTheme {
                 navController = rememberNavController()
-                SetupNavigation(navController = navController)
+                SetupNavigation(
+                    navController = navController,
+                    sharedViewModel = sharedViewModel
+                )
 
             }
         }

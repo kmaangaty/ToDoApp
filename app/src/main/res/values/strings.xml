@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">ToDo App</string>
     <string name="add_button">Add Button</string>
+    <string name="search_action">Search Task</string>
+    <string name="sort_action">Sort Tasks</string>
+    <string name="delete_all_action">Delete All</string>
+    <string name="delete_all_description">Delete All Action</string>
+    <string name="close_description">Close Search</string>
+    <string name="tasks_title">Tasks</string>
+    <string name="search_place_holder">Search...</string>
 
 </resources>

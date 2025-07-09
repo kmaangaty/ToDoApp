@@ -7,7 +7,7 @@ import com.example.todoapp.ui.theme.MediumPriorityColor
 import com.example.todoapp.ui.theme.NonePriorityColor
 
 
-enum class Priority(color: Color) {
+enum class Priority(val color: Color) {
     HIGH(HighPriorityColor),
     MEDIUM(MediumPriorityColor),
     LOW(LowPriorityColor),
