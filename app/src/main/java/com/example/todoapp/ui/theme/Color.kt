@@ -26,11 +26,11 @@ val LowPriorityColor = Color(0xFF00C980)
 val NonePriorityColor = Color(0xFFFFFFFF)
 
 
-val MaterialTheme.topAppBarBackgroundColor: Color
+val MaterialTheme.topAppBarContentColor: Color
     @Composable
     get() = if (!isSystemInDarkTheme()) Color.White else LightGrey
 
-val MaterialTheme.topAppBarContentColor: Color
+val MaterialTheme.topAppBarBackgroundColor: Color
     @Composable
     get() = if (!isSystemInDarkTheme()) PurpleGrey500 else Color.Black
 
@@ -38,3 +38,12 @@ val MaterialTheme.fabBackGroundColor: Color
     @Composable
     get() = if (!isSystemInDarkTheme()) Teal200 else Purple700
 
+
+val MaterialTheme.taskItemTextColor: Color
+    @Composable
+    get() = if (!isSystemInDarkTheme()) DarkGrey else Color.White
+
+
+val MaterialTheme.taskItemBackgroundColor: Color
+    @Composable
+    get() = if (!isSystemInDarkTheme()) Color.White else DarkGrey

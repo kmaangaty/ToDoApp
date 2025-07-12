@@ -38,8 +38,8 @@ import com.example.todoapp.components.PriorityItem
 import com.example.todoapp.data.models.Priority
 import com.example.todoapp.ui.theme.LARGE_PADDING
 import com.example.todoapp.ui.theme.TOP_APP_BAR_HEIGHT
-import com.example.todoapp.ui.theme.topAppBarBackgroundColor
 import com.example.todoapp.ui.theme.topAppBarContentColor
+import com.example.todoapp.ui.theme.topAppBarBackgroundColor
 import com.example.todoapp.ui.viewmodels.SharedViewModel
 
 @Composable
@@ -85,8 +85,8 @@ fun DefaultListAppBar(
     TopAppBar(
         title = { Text(stringResource(id = R.string.tasks_title)) },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.topAppBarContentColor,
-            titleContentColor = MaterialTheme.topAppBarBackgroundColor
+            containerColor = MaterialTheme.topAppBarBackgroundColor,
+            titleContentColor = MaterialTheme.topAppBarContentColor
         ),
         actions = {
             ListAppBarActions(
@@ -121,7 +121,7 @@ fun SearchAction(
         Icon(
             imageVector = Icons.Filled.Search,
             contentDescription = stringResource(R.string.search_action),
-            tint = MaterialTheme.topAppBarBackgroundColor
+            tint = MaterialTheme.topAppBarContentColor
         )
     }
 }
@@ -140,7 +140,7 @@ fun SortAction(
         Icon(
             painter = painterResource(id = R.drawable.ic_filter_list),
             contentDescription = stringResource(id = R.string.sort_action),
-            tint = MaterialTheme.topAppBarBackgroundColor
+            tint = MaterialTheme.topAppBarContentColor
         )
         DropdownMenu(
             expanded = expended,
@@ -187,7 +187,7 @@ fun DeleteAllAction(
         Icon(
             painter = painterResource(id = R.drawable.ic_delete_all),
             contentDescription = stringResource(id = R.string.delete_all_description),
-            tint = MaterialTheme.topAppBarBackgroundColor
+            tint = MaterialTheme.topAppBarContentColor
         )
         DropdownMenu(
             expanded = expended,
@@ -248,7 +248,7 @@ fun SearchAppBar(
                 )
             },
             textStyle = TextStyle(
-                color = MaterialTheme.topAppBarContentColor,
+                color = MaterialTheme.topAppBarBackgroundColor,
                 fontSize = MaterialTheme.typography.titleMedium.fontSize
             ),
             singleLine = true,
@@ -262,7 +262,7 @@ fun SearchAppBar(
                     Icon(
                         imageVector = Icons.Filled.Search,
                         contentDescription = stringResource(R.string.search_action),
-                        tint = MaterialTheme.topAppBarContentColor
+                        tint = MaterialTheme.topAppBarBackgroundColor
                     )
                 }
             },
@@ -290,7 +290,7 @@ fun SearchAppBar(
                     Icon(
                         imageVector = Icons.Filled.Close,
                         contentDescription = stringResource(R.string.close_description),
-                        tint = MaterialTheme.topAppBarContentColor
+                        tint = MaterialTheme.topAppBarBackgroundColor
                     )
                 }
             },
